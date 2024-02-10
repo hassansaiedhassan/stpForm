@@ -96,23 +96,30 @@ const App = () => {
 
 
   return (
-    <div className="app ">
-<div className="container   p-2 w-50 ">
-      <form onSubmit={handleSubmit} className=" group p-3 rounded-2 colorbody ">
-        
-        {inputs.map((input) => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <div className=" text-center  p-2 ">
-        <button className="form-btn rounded-4 w-50 btn-primary" type="submit">Submit</button></div>
-      </form>
-      </div>
+
+    <><div className="position-fixed  m-4 z-1  ">
+      <img src="/src/img/logo.svg" className="w-75" alt="" />
     </div>
+    <div className="app">
+
+        <div className="w-50 imgGroup">
+          <img src="./src/img/Group.svg"  alt="" />
+        </div>
+        <div className="container me-2  p-2 w-50  ">
+          <form onSubmit={handleSubmit} className=" group p-3 rounded-2 colorbody h-75 ">
+
+            {inputs.map((input) => (
+              <FormInput
+                key={input.id}
+                {...input}
+                value={values[input.name]}
+                onChange={onChange} />
+            ))}
+            <div className=" text-center  p-2 ">
+              <button className="form-btn rounded-4 w-50 btn-primary" type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div></>
   );
 };
 
